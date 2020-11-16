@@ -3,13 +3,13 @@
 set -e
 ls /tmp/codedeploy-deployment-staging-area > /tmp/agout.txt
 
-CATALINA_HOME='/usr/share/tomcat'
+CATALINA_HOME='/usr/share/tomcat7-codedeploy'
 DEPLOY_TO_ROOT='true'
 #CONTEXT_PATH='##CONTEXT_PATH##'
 SERVER_HTTP_PORT='80'
 
 TEMP_STAGING_DIR='/tmp/codedeploy-deployment-staging-area'
-WAR_STAGED_LOCATION="$TEMP_STAGING_DIR/src/target/spring-petclinic-2.3.0.BUILD-SNAPSHOT.jar"
+WAR_STAGED_LOCATION="$TEMP_STAGING_DIR/target/spring-petclinic-2.3.0.BUILD-SNAPSHOT.jar"
 HTTP_PORT_CONFIG_XSL_LOCATION="$TEMP_STAGING_DIR/configure_http_port.xsl"
 
 # In Tomcat, ROOT.war maps to the server root
