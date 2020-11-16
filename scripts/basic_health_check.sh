@@ -11,4 +11,5 @@ do
   sleep 10
 done
 echo "Server did not come up after expected time. Failing."
+echo $(hostname)
 exit 1
