@@ -3,11 +3,9 @@
 set -e
 CATALINA_HOME=/usr/share/agwebapps
 cd $CATALINA_HOME
- 
-
 
 FILE=./pid.file
 if [ -f "$FILE" ]; then
 	echo "$FILE exists."
-    kill $(cat ./pid.file)
+    kill $(cat ./pid.file) || echo "Error Killing process $(cat ./pid.file)"
 fi
