@@ -3,3 +3,11 @@
 set -e
 CATALINA_HOME=/usr/share/agwebapps
 cd $CATALINA_HOME
+ 
+
+
+FILE=./pid.file
+if [ -f "$FILE" ]; then
+	echo "$FILE exists."
+    kill $(cat ./pid.file)
+fi
