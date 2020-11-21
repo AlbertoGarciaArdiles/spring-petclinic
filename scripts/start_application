@@ -30,7 +30,7 @@ cp -rf $TEMP_STAGING_DIR/target $CATALINA_HOME
 cd $CATALINA_HOME
 #./mvnw spring-boot:run
 
-java -jar spring-petclinic-2.3.0.BUILD-SNAPSHOT.jar && echo $! > ./pid.file && bg
+java -jar spring-petclinic-2.3.0.BUILD-SNAPSHOT.jar & echo $! > ./pid.file & bg
 
 # Copy the WAR file to the webapps directory
 # cp $WAR_STAGED_LOCATION $CATALINA_HOME/webapps/$CONTEXT_PATH.war
