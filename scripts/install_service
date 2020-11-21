@@ -2,6 +2,14 @@
 
 set -e
 
+CATALINA_HOME=/usr/share/agwebapps
+
+TEMP_STAGING_DIR='/tmp/codedeploy-deployment-staging-area'
+
+rm -rfv $CATALINA_HOME/
+
+cp -rf $TEMP_STAGING_DIR/target $CATALINA_HOME/
+
 # Create the service init.d script
 cat > /etc/init.d/springpet <<'EOF'
 CATALINA_HOME=/usr/share/agwebapps
