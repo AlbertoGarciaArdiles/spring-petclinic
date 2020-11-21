@@ -3,6 +3,7 @@
 set -e
 
 CATALINA_HOME=/usr/share/agwebapps
+TEMP_STAGING_DIR='/tmp/codedeploy-deployment-staging-area'
 #TOMCAT_VERSION=7.0.106
 
 # Tar file name
@@ -25,6 +26,15 @@ if [ -d $CATALINA_HOME ]; then
     rm -rf $CATALINA_HOME
 fi
 mkdir -p $CATALINA_HOME
+
+if [ -d $TEMP_STAGING_DIR ]; then
+    rm -rf $TEMP_STAGING_DIR
+fi
+mkdir -p $TEMP_STAGING_DIR
+
+rm -f /etc/init.d/springpet
+
+#rm -rfv $CATALINA_HOME/
 
 # # Download the latest Tomcat7 version
 # cd /tmp
