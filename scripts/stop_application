@@ -1,15 +1,3 @@
-#!/bin/bash
-
-# set -e
-# CATALINA_HOME=/usr/share/agwebapps
-# cd $CATALINA_HOME
-
-# FILE=./pid.file
-# if [ -f "$FILE" ]; then
-# 	echo "$FILE exists."
-#     kill $(cat ./pid.file) || echo "Error killing process $(cat ./pid.file)"
-# fi
-
 PID_PATH_NAME=/tmp/springpet-pid
 
 if [ -f $PID_PATH_NAME ]; then
