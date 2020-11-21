@@ -22,17 +22,17 @@ TEMP_STAGING_DIR='/tmp/codedeploy-deployment-staging-area'
 # }
 
 # Clear install directory
-if [ -d $CATALINA_HOME ]; then
-    rm -rf $CATALINA_HOME
-fi
-mkdir -p $CATALINA_HOME
+# if [ -d $CATALINA_HOME ]; then
+#     rm -rf $CATALINA_HOME
+# fi
+# mkdir -p $CATALINA_HOME
 
-if [ -d $TEMP_STAGING_DIR ]; then
-    rm -rf $TEMP_STAGING_DIR
-fi
-mkdir -p $TEMP_STAGING_DIR
+# if [ -d $TEMP_STAGING_DIR ]; then
+#     rm -rf $TEMP_STAGING_DIR
+# fi
+# mkdir -p $TEMP_STAGING_DIR
 
-rm -f /etc/init.d/springpet
+# rm -f /etc/init.d/springpet
 
 #rm -rfv $CATALINA_HOME/
 
