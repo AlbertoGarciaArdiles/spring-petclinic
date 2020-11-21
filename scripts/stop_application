@@ -1,5 +1,6 @@
 #!/bin/bash
 
 set -e
-
-service tomcat7 stop
+CATALINA_HOME=/usr/share/agwebapps
+cd $CATALINA_HOME
+kill $(cat ./pid.file)
