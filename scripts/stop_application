@@ -3,4 +3,4 @@
 set -e
 CATALINA_HOME=/usr/share/agwebapps
 cd $CATALINA_HOME
-kill $(cat ./pid.file)
+#kill $(cat ./pid.file)

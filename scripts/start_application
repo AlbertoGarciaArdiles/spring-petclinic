@@ -26,7 +26,7 @@ TEMP_STAGING_DIR='/tmp/codedeploy-deployment-staging-area'
 # fi
 
 rm -rfv $CATALINA_HOME/
-cp -rf $TEMP_STAGING_DIR $CATALINA_HOME
+cp -rf $TEMP_STAGING_DIR/target $CATALINA_HOME
 
 cd $CATALINA_HOME
 #./mvnw spring-boot:run
