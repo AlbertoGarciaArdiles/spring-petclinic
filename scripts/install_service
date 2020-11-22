@@ -12,7 +12,7 @@ cat > /etc/init.d/springpet <<'EOF'
 CATALINA_HOME=/usr/share/agwebapps
 
 SERVICE_NAME=springpet
-PATH_TO_JAR=$CATALINA_HOME/spring-petclinic-2.3.1.BUILD-SNAPSHOT.jar 
+PATH_TO_JAR=$CATALINA_HOME/spring-petclinic-2.3.2.BUILD-SNAPSHOT.jar 
 PID_PATH_NAME=/tmp/springpet-pid
 case $1 in 
 start)
