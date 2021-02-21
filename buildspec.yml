@@ -1,14 +1,10 @@
-version: 0.1
+version: 0.2
 
 phases:
   build:
     commands:
       - echo Build completed on `date`
       - mvn package
-
-# cache:
-#   paths:
-#     - '/root/.m2/**/*'
 
 artifacts:
   files:

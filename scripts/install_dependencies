@@ -53,7 +53,7 @@ echo "AG - $CATALINA_HOME CREATED "
 # Copy over to the CATALINA_HOME
 echo "AG - TEMP_STAGING_DIR: $TEMP_STAGING_DIR"
 echo "AG - CATALINA_HOME: $CATALINA_HOME"
-cp -R $TEMP_STAGING_DIR/* $CATALINA_HOME
+cp -Rp $TEMP_STAGING_DIR/* $CATALINA_HOME
 echo "AG - COPIED FILES FROM : $TEMP_STAGING_DIR TO $CATALINA_HOME"
 # Install Java if not yet installed
 { which java; } || { yum install java -y; }
