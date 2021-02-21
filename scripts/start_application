@@ -1,13 +1,13 @@
 #!/bin/bash
 
 set -e -m
-
+CATALINA_HOME=/usr/share/agwebapps
 #service springpet start
 
 echo "AG - Start Application"
 echo "AG - Changing to CATALIN_HOME: $CATALINA_HOME"
 cd $CATALINA_HOME
-./mvnw spring-boot:run
+./mvnw spring-boot:start
 
 #java -jar spring-petclinic-2.3.1.BUILD-SNAPSHOT.jar & echo $! > ./pid.file & bg
 

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#stop if something fails
 set -e
 
 CATALINA_HOME=/usr/share/agwebapps
@@ -55,6 +56,8 @@ echo "AG - COPIED FILES FROM : $TEMP_STAGING_DIR TO $CATALINA_HOME"
 # Install Java if not yet installed
 { which java; } || { yum install java -y; }
 
+cd $CATALINA_HOME
+./mvnw dependency:go-offline
 # # Create the service init.d script
 # cat > /etc/init.d/tomcat7 <<'EOF'
 # #!/bin/bash
