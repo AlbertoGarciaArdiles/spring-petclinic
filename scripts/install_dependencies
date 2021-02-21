@@ -31,12 +31,12 @@ mkdir -p $CATALINA_HOME
 echo "AG - $CATALINA_HOME CREATED "
 
 # Clear Stage Directory
-if [ -d $TEMP_STAGING_DIR ]; then
-    rm -rf $TEMP_STAGING_DIR
-    echo "AG - STAGE TEMP DIR: $TEMP_STAGING_DIR DELETED "
-fi
-mkdir -p $TEMP_STAGING_DIR
-echo "AG - STAGE TEMP DIR: $TEMP_STAGING_DIR CREATED "
+# if [ -d $TEMP_STAGING_DIR ]; then
+#     rm -rf $TEMP_STAGING_DIR
+#     echo "AG - STAGE TEMP DIR: $TEMP_STAGING_DIR DELETED "
+# fi
+# mkdir -p $TEMP_STAGING_DIR
+# echo "AG - STAGE TEMP DIR: $TEMP_STAGING_DIR CREATED "
 # rm -f /etc/init.d/springpet
 
 #rm -rfv $CATALINA_HOME/
@@ -51,13 +51,15 @@ echo "AG - STAGE TEMP DIR: $TEMP_STAGING_DIR CREATED "
 # tar xzf $TOMCAT7_CORE_TAR_FILENAME
 
 # Copy over to the CATALINA_HOME
+echo "AG - TEMP_STAGING_DIR: $TEMP_STAGING_DIR"
+echo "AG - CATALINA_HOME: $CATALINA_HOME"
 cp -r $TEMP_STAGING_DIR/* $CATALINA_HOME
 echo "AG - COPIED FILES FROM : $TEMP_STAGING_DIR TO $CATALINA_HOME"
 # Install Java if not yet installed
 { which java; } || { yum install java -y; }
 
-cd $CATALINA_HOME
-./mvnw dependency:go-offline
+# cd $CATALINA_HOME
+# ./mvnw dependency:go-offline
 # # Create the service init.d script
 # cat > /etc/init.d/tomcat7 <<'EOF'
 # #!/bin/bash
