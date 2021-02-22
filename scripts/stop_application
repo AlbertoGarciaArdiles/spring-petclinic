@@ -13,6 +13,4 @@
 # fi
 
 ps -aux | grep "[s]pring-boot" | awk '{print $2}' | \
-while read i;
-     do kill -9 $i;
-done
+while read i; do sudo kill -9 $i; done
